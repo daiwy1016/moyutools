@@ -1,0 +1,499 @@
+调用堆栈：     线程  000026B4
+地址       堆栈       函数过程 / 参数                       调用来自                      结构
+083BFF68   006C22E8   ? GmTools.006C14C8                    GmTools.006C22E3              083BFF64
+083BFF74   006C092E   GmTools.006C22C4                      GmTools.006C0929              083BFF70
+083BFF78   00404B42   包含GmTools.006C092E                    GmTools.00404B40              083BFF88
+083BFF8C   74B4344D   包含GmTools.00404B42                    kernel32.74B4344B             083BFF88
+
+006C091C    4D              dec ebp
+006C091D    61              popad
+006C091E    72 67           jb short GmTools.006C0987
+006C0920    65:8D40 00      lea eax,dword ptr gs:[eax]
+006C0924    A1 0CFE7500     mov eax,dword ptr ds:[0x75FE0C]
+006C0929    E8 96190000     call GmTools.006C22C4                    ; 合区
+006C092E    C3              retn
+006C092F    90              nop
+006C0930    55              push ebp
+006C0931    8BEC            mov ebp,esp
+006C0933    83C4 E4         add esp,-0x1C
+
+
+006C3EC7    8B10            mov edx,dword ptr ds:[eax]
+006C3EC9    FF52 44         call dword ptr ds:[edx+0x44]             ; GmTools.00746E75
+006C3ECC    68 20406C00     push GmTools.006C4020                    ; family_name
+006C3ED1    68 E43F6C00     push GmTools.006C3FE4                    ; id
+006C3ED6    B9 34406C00     mov ecx,GmTools.006C4034                 ; cq_family
+006C3EDB    BA 02000000     mov edx,0x2
+006C3EE0    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006C3EE3    E8 1CE1FFFF     call GmTools.006C2004
+006C3EE8    68 20406C00     push GmTools.006C4020                    ; family_name
+006C3EED    68 E43F6C00     push GmTools.006C3FE4                    ; id
+006C3EF2    8B45 F8         mov eax,dword ptr ss:[ebp-0x8]
+006C3EF5    50              push eax
+006C3EF6    B9 34406C00     mov ecx,GmTools.006C4034                 ; cq_family
+006C3EFB    BA 04000000     mov edx,0x4
+006C3F00    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006C3F03    E8 DCD0FFFF     call GmTools.006C0FE4
+006C3F08    68 20406C00     push GmTools.006C4020                    ; family_name
+
+
+006C16CE    8B80 AC0C0000   mov eax,dword ptr ds:[eax+0xCAC]         ; GmTools.00650032
+006C16D4    E8 1F0FDCFF     call GmTools.004825F8
+006C16D9    50              push eax
+006C16DA    E8 E16AD4FF     call <jmp.&user32.SendMessageA>
+006C16DF    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006C16E2    E8 F9260000     call GmTools.006C3DE0                    ; 合区？
+006C16E7    6A 00           push 0x0
+006C16E9    6A 0C           push 0xC
+006C16EB    68 02040000     push 0x402
+
+
+合区按钮 事件
+
+006C22C4    55              push ebp
+006C22C5    8BEC            mov ebp,esp
+006C22C7    51              push ecx
+006C22C8    8945 FC         mov dword ptr ss:[ebp-0x4],eax
+006C22CB    EB 1B           jmp short GmTools.006C22E8
+006C22CD    6A 01           push 0x1
+006C22CF    E8 18E8D4FF     call <jmp.&kernel32.Sleep>
+006C22D4    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006C22D7    8A40 10         mov al,byte ptr ds:[eax+0x10]
+006C22DA    FEC8            dec al
+006C22DC    74 02           je short GmTools.006C22E0
+006C22DE    EB 08           jmp short GmTools.006C22E8
+006C22E0    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006C22E3    E8 E0F1FFFF     call GmTools.006C14C8             合区
+006C22E8    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006C22EB    8078 05 00      cmp byte ptr ds:[eax+0x5],0x0
+006C22EF  ^ 74 DC           je short GmTools.006C22CD
+006C22F1    59              pop ecx
+006C22F2    5D              pop ebp
+006C22F3    C3              retn
+
+
+
+
+006C4271    E8 9290F5FF     call GmTools.0061D308
+
+
+随机数的获取
+
+0061D308    55              push ebp
+0061D309    8BEC            mov ebp,esp
+0061D30B    83C4 BC         add esp,-0x44
+0061D30E    894D F4         mov dword ptr ss:[ebp-0xC],ecx
+0061D311    8955 F8         mov dword ptr ss:[ebp-0x8],edx
+0061D314    8945 FC         mov dword ptr ss:[ebp-0x4],eax
+0061D317    C745 D0 4713010>mov dword ptr ss:[ebp-0x30],0x11347
+0061D31E    C745 D4 6BEF0E0>mov dword ptr ss:[ebp-0x2C],0xEEF6B
+0061D325    C745 D8 5D9C070>mov dword ptr ss:[ebp-0x28],0x79C5D
+0061D32C    C745 DC EF97090>mov dword ptr ss:[ebp-0x24],0x997EF
+0061D333    C745 E0 2103000>mov dword ptr ss:[ebp-0x20],0x321
+0061D33A    C745 E4 3421000>mov dword ptr ss:[ebp-0x1C],0x2134
+0061D341    C745 E8 2237000>mov dword ptr ss:[ebp-0x18],0x3722
+0061D348    C745 EC 0D01010>mov dword ptr ss:[ebp-0x14],0x1010D
+0061D34F    C745 BC 4713520>mov dword ptr ss:[ebp-0x44],GmTools.0052>
+0061D356    C745 C0 6BEF120>mov dword ptr ss:[ebp-0x40],0x12EF6B
+0061D35D    C745 C4 5D9C230>mov dword ptr ss:[ebp-0x3C],0x239C5D
+0061D364    C745 C8 4CEE400>mov dword ptr ss:[ebp-0x38],0x340EE4C    ; \n\t</tr>\r\n\t<tr>\r\n\t\t<td id="Heading4Align" align="right" valign="top">\r\n\t\t\t&nbsp;\r\n\t\t</td>\r\n\t\t<td id="Heading5Align" align="left">\r\n\t\t\t<table border="0" cellspacing="0" cellpadding="0">\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td>\r\n\t\t\t\
+0061D36B    8B45 F4         mov eax,dword ptr ss:[ebp-0xC]           ; GmTools.006C173E
+0061D36E    25 FF000000     and eax,0xFF
+0061D373    0FB680 14887400 movzx eax,byte ptr ds:[eax+0x748814]
+0061D37A    8B55 FC         mov edx,dword ptr ss:[ebp-0x4]
+0061D37D    83E2 07         and edx,0x7
+0061D380    034495 D0       add eax,dword ptr ss:[ebp+edx*4-0x30]
+0061D384    8B55 08         mov edx,dword ptr ss:[ebp+0x8]
+0061D387    83E2 03         and edx,0x3
+0061D38A    034495 BC       add eax,dword ptr ss:[ebp+edx*4-0x44]
+0061D38E    8B55 F8         mov edx,dword ptr ss:[ebp-0x8]
+0061D391    3355 F4         xor edx,dword ptr ss:[ebp-0xC]           ; GmTools.006C173E
+0061D394    0355 FC         add edx,dword ptr ss:[ebp-0x4]
+0061D397    03C2            add eax,edx
+0061D399    8B55 0C         mov edx,dword ptr ss:[ebp+0xC]
+0061D39C    C1E2 03         shl edx,0x3
+0061D39F    03C2            add eax,edx
+0061D3A1    0345 F8         add eax,dword ptr ss:[ebp-0x8]
+0061D3A4    0345 F4         add eax,dword ptr ss:[ebp-0xC]           ; GmTools.006C173E
+0061D3A7    0345 08         add eax,dword ptr ss:[ebp+0x8]
+0061D3AA    8945 F0         mov dword ptr ss:[ebp-0x10],eax
+0061D3AD    8B45 F0         mov eax,dword ptr ss:[ebp-0x10]
+0061D3B0    8BE5            mov esp,ebp
+0061D3B2    5D              pop ebp
+0061D3B3    C2 0800         retn 0x8
+
+
+合区call
+
+006C0920    65:8D40 00      lea eax,dword ptr gs:[eax]               ; 点击测试数据库状态时
+006C0924    A1 0CFE7500     mov eax,dword ptr ds:[0x75FE0C]          ; 应该是合区循环call
+006C0929    E8 96190000     call GmTools.006C22C4
+006C092E    C3              retn
+
+死循环 判断 
+006C22C4    55              push ebp
+006C22C5    8BEC            mov ebp,esp
+006C22C7    51              push ecx                                 ; KernelBa.76973DC3
+006C22C8    8945 FC         mov dword ptr ss:[ebp-0x4],eax
+006C22CB    EB 1B           jmp short GmTools.006C22E8
+006C22CD    6A 01           push 0x1
+006C22CF    E8 18E8D4FF     call <jmp.&kernel32.Sleep>
+006C22D4    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006C22D7    8A40 10         mov al,byte ptr ds:[eax+0x10]            ; ds:[024C7950]=00
+006C22DA    FEC8            dec al
+006C22DC    74 02           je short GmTools.006C22E0
+006C22DE    EB 08           jmp short GmTools.006C22E8
+006C22E0    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006C22E3    E8 E0F1FFFF     call GmTools.006C14C8                    ; 合区动作
+006C22E8    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006C22EB    8078 05 00      cmp byte ptr ds:[eax+0x5],0x0            ; ds:[024C7945]=00
+006C22EF  ^ 74 DC           je short GmTools.006C22CD
+006C22F1    59              pop ecx                                  ; 024C7940
+006C22F2    5D              pop ebp                                  ; 024C7940
+006C22F3    C3              retn
+
+mov eax,dword ptr ds:[0x75FE0C]
+call 006C14C8
+
+
+
+024C7940  F0 08 6C 00 00 00 00 00 04 25 00 00 4C 03 00 00  ?l.....%..L..
+024C7950  00 00 00 00 4C 2F 1D 0A 74 2F 1D 0A FC 2E 1D 0A  ....L/.t/.?.
+024C7960  24 2F 1D 0A 7C 79 4C 02 B0 79 4C 02 3A 1E 02 00  $/.|yL皔L:.
+024C7970  E4 79 4C 02 0C 6C 47 08 36 00 00 00 18 E8 41 00  鋣L.lG6...鐰.
+024C7980  00 00 00 00 00 00 00 00 00 00 00 00 00 80 77     .............�w
+
+F0 08 6C 00 00 00 00 00 04 25 00 00 4C 03 00 00 00 00 00 00 4C 2F 1D 0A 74 2F 1D 0A FC 2E 1D 0A 24 2F 1D 0A 7C 79 4C 02 B0 79 4C 02 3A 1E 02 00
+024A7934  006C08F0  GmTools.006C08F0
+024A7938  00000000
+024A793C  000029BC
+024A7940  00000350
+024A7944  00000000
+024A7948  00000000
+024A794C  00000000
+024A7950  00000000
+024A7954  00000000
+
+
+024A7924  00000000
+024A7928  00000000
+024A792C  00000000
+024A7930  0000003E
+024A7934  006C08F0  GmTools.006C08F0
+024A7938  00000000
+024A793C  00002504
+024A7940  0000034C
+024A7944  00000000
+024A7948  0A2DB348  ASCII "account1"
+024A794C  0A27D52C  ASCII "my1"
+024A7950  024BC8BC  ASCII "account"
+024A7954  0254871C  ASCII "my"
+
+
+
+0043073E - 8B 55 FC  - mov edx,[ebp-04]
+00430741 - 89 50 0C  - mov [eax+0C],edx
+00430744 - C7 40 08 30184300 - mov [eax+08],GmTools.exe+31830 <<
+0043074B - 8B 45 FC  - mov eax,[ebp-04]
+0043074E - 83 C0 38 - add eax,38
+
+EAX=0A25AA00
+EBX=08476C80
+ECX=0A25AA00
+EDX=0A385148
+ESI=0A315394
+EDI=0018F9A4
+ESP=0018F84C
+EBP=0018F854
+EIP=0043074B
+
+
+00403D81 - 51 - push ecx
+00403D82 - C1 E9 02 - shr ecx,02
+00403D85 - 49 - dec ecx <<
+00403D86 - F3 AB - repe stosd 
+00403D88 - 59 - pop ecx
+
+EAX=00000000
+EBX=0042E1F0
+ECX=00000003
+EDX=0A25AA00
+ESI=005385E0
+EDI=0A25AA0C
+ESP=0018F988
+EBP=0018F9CC
+EIP=00403D86
+
+
+
+
+
+006C22E0    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006C22E3    E8 E0F1FFFF     call GmTools.006C14C8
+
+
+
+0061CEC4    55              push ebp                                              ; 弹窗
+0061CEC5    8BEC            mov ebp,esp
+0061CEC7    83C4 EC         add esp,-0x14
+0061CECA    884D F7         mov byte ptr ss:[ebp-0x9],cl
+0061CECD    8955 F8         mov dword ptr ss:[ebp-0x8],edx
+0061CED0    8945 FC         mov dword ptr ss:[ebp-0x4],eax
+0061CED3    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+0061CED6    8B40 30         mov eax,dword ptr ds:[eax+0x30]
+0061CED9    50              push eax
+0061CEDA    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+0061CEDD    8B40 34         mov eax,dword ptr ds:[eax+0x34]
+0061CEE0    50              push eax
+0061CEE1    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+0061CEE4    8B40 38         mov eax,dword ptr ds:[eax+0x38]
+0061CEE7    50              push eax
+0061CEE8    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+0061CEEB    8B40 3C         mov eax,dword ptr ds:[eax+0x3C]
+0061CEEE    50              push eax
+0061CEEF    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+0061CEF2    8B40 40         mov eax,dword ptr ds:[eax+0x40]
+0061CEF5    50              push eax
+0061CEF6    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+0061CEF9    8B40 44         mov eax,dword ptr ds:[eax+0x44]
+0061CEFC    50              push eax
+0061CEFD    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+0061CF00    8A40 48         mov al,byte ptr ds:[eax+0x48]
+0061CF03    50              push eax
+0061CF04    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+
+
+
+0053627D    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+00536280    66:83B8 4203000>cmp word ptr ds:[eax+0x342],0x0
+00536288    74 12           je short GmTools.0053629C
+0053628A    8B5D FC         mov ebx,dword ptr ss:[ebp-0x4]
+0053628D    8B55 FC         mov edx,dword ptr ss:[ebp-0x4]
+00536290    8B83 44030000   mov eax,dword ptr ds:[ebx+0x344]                      ; 按钮？
+00536296    FF93 40030000   call dword ptr ds:[ebx+0x340]                         ; GmTools.006D7A5C
+0053629C    5B              pop ebx                                               ; 0A291718
+0053629D    59              pop ecx                                               ; 0A291718
+0053629E    59              pop ecx                                               ; 0A291718
+0053629F    5D              pop ebp                                               ; 0A291718
+
+
+
+006D8280    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006D8283    E8 24190100     call GmTools.006E9BAC
+006D8288    E9 A5060000     jmp GmTools.006D8932
+006D828D    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006D8290    E8 0F1B0100     call GmTools.006E9DA4
+006D8295    E9 98060000     jmp GmTools.006D8932
+006D829A    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006D829D    E8 A22D0100     call GmTools.006EB044                                 ; 测试数据库存状态
+006D82A2    E9 8B060000     jmp GmTools.006D8932
+006D82A7    8B45 FC         mov eax,dword ptr ss:[ebp-0x4]
+006D82AA    E8 95320100     call GmTools.006EB544
+
+
+
+
+
+
+链接数据库
+
+
+
+006EB267    8B45 F0         mov eax,dword ptr ss:[ebp-0x10]
+006EB26A    50              push eax                                              ; eax=0A386CA0, (ASCII "test")
+006EB26B    8B45 EC         mov eax,dword ptr ss:[ebp-0x14]
+006EB26E    50              push eax                                              ; eax=0A387B50, (ASCII "3306")
+006EB26F    8B45 E8         mov eax,dword ptr ss:[ebp-0x18]
+006EB272    50              push eax                                              ; eax=0250C9F8, (ASCII "zhanghao1")
+006EB273    8B45 E4         mov eax,dword ptr ss:[ebp-0x1C]
+006EB276    50              push eax                                              ; eax=0A387B78, (ASCII "jiaose1")
+006EB277    8B45 E0         mov eax,dword ptr ss:[ebp-0x20]
+006EB27A    50              push eax                                              ; eax=0A33645C, (ASCII "zhanghao2")
+006EB27B    8B45 DC         mov eax,dword ptr ss:[ebp-0x24]
+006EB27E    50              push eax                                              ; eax=0A387BA0, (ASCII "jiaose2")
+006EB27F    8D45 D4         lea eax,dword ptr ss:[ebp-0x2C]                       ; 堆栈地址=0018FB70
+006EB282    50              push eax
+006EB283    A1 D4A07500     mov eax,dword ptr ds:[0x75A0D4]
+006EB288    8B00            mov eax,dword ptr ds:[eax]                            ; GmTools.0052DAD8
+006EB28A    8B4D F4         mov ecx,dword ptr ss:[ebp-0xC]                        ; 堆栈 ss:[0018FB90]=0A386CC8, (ASCII "test")
+006EB28D    8B55 F8         mov edx,dword ptr ss:[ebp-0x8]                        ; 堆栈 ss:[0018FB94]=0251CA60, (ASCII "127.0.0.1")
+006EB290    E8 87560500     call GmTools.0074091C
+
+0074091C    55              push ebp
+0074091D    8BEC            mov ebp,esp
+0074091F    83C4 EC         add esp,-0x14
+00740922    53              push ebx
+00740923    56              push esi
+00740924    57              push edi
+00740925    894D F4         mov dword ptr ss:[ebp-0xC],ecx                        ; test
+00740928    8955 F8         mov dword ptr ss:[ebp-0x8],edx                        ; 127.0.0.1
+0074092B    8945 FC         mov dword ptr ss:[ebp-0x4],eax
+0074092E    8B45 F8         mov eax,dword ptr ss:[ebp-0x8]                        ; 127.0.0.1
+00740931    E8 1647CCFF     call GmTools.0040504C
+00740936    8B45 F4         mov eax,dword ptr ss:[ebp-0xC]                        ; test
+00740939    E8 0E47CCFF     call GmTools.0040504C
+0074093E    8B45 20         mov eax,dword ptr ss:[ebp+0x20]                       ; test
+00740941    E8 0647CCFF     call GmTools.0040504C
+00740946    8B45 1C         mov eax,dword ptr ss:[ebp+0x1C]                       ; 3306
+00740949    E8 FE46CCFF     call GmTools.0040504C
+0074094E    8B45 18         mov eax,dword ptr ss:[ebp+0x18]                       ; hequ1
+00740951    E8 F646CCFF     call GmTools.0040504C
+00740956    8B45 14         mov eax,dword ptr ss:[ebp+0x14]                       ; hequ1
+00740959    E8 EE46CCFF     call GmTools.0040504C
+0074095E    8B45 10         mov eax,dword ptr ss:[ebp+0x10]                       ; hequ2
+00740961    E8 E646CCFF     call GmTools.0040504C
+00740966    8B45 0C         mov eax,dword ptr ss:[ebp+0xC]                        ; hequ2
+00740969    E8 DE46CCFF     call GmTools.0040504C
+
+
+
+0018FB70  00000000
+0018FB74  00000000
+0018FB78  0A387BA0  ASCII "jiaose2"
+0018FB7C  0A33645C  ASCII "zhanghao2"
+0018FB80  0A387B78  ASCII "jiaose1"
+0018FB84  0250C9F8  ASCII "zhanghao1"
+0018FB88  0A387B50  ASCII "3306"
+0018FB8C  0A386CA0  ASCII "test"
+0018FB90  0A386CC8  ASCII "test"
+0018FB94  0251CA60  ASCII "127.0.0.1"
+
+
+
+0018FB38   0018FBA4  指向下一个 SEH 记录的指针
+0018FB3C   006EB446  SE处理程序
+0018FB40   0018FB9C
+0018FB44   00000000
+0018FB48   00000000
+0018FB4C   00000000
+0018FB50   0A36F5C8  ASCII "my0"
+0018FB54   0250C9F8  ASCII "account0"
+0018FB58   025424AC  ASCII "my"
+0018FB5C   0A38674C  ASCII "account"
+0018FB60   0A386724  ASCII "3306"
+0018FB64   0A28FF88  ASCII "test"
+0018FB68   024CA1A4  ASCII "test"
+0018FB6C   0A33648C  ASCII "127.0.0.1"
+0018FB70   0251CA60  ASCII "account0"
+
+
+
+
+EAX 024007F4
+ECX 0A153CE0 ASCII "test"
+EDX 0A19DA9C ASCII "127.0.0.1"
+EBX 0A1722B8
+ESP 0018FB18
+EBP 0018FB9C
+ESI 005385E0 GmTools.005385E0
+EDI 00000000
+EIP 0074091C GmTools.0074091C
+C 0  ES 002B 32位 0(FFFFFFFF)
+P 1  CS 0023 32位 0(FFFFFFFF)
+A 0  SS 002B 32位 0(FFFFFFFF)
+Z 1  DS 002B 32位 0(FFFFFFFF)
+S 0  FS 0053 32位 7EFDD000(FFF)
+T 0  GS 002B 32位 0(FFFFFFFF)
+D 0
+O 0  LastErr ERROR_SUCCESS (00000000)
+EFL 00000246 (NO,NB,E,BE,NS,PE,GE,LE)
+ST0 empty 0.0999999999999999872
+ST1 empty 10.00000000000000000
+ST2 empty 0.0999999999999999872
+ST3 empty 1.0000000000000000000
+ST4 empty 0.0
+ST5 empty 244.00000000000000000
+ST6 empty 0.0
+ST7 empty 0.0
+               3 2 1 0      E S P U O Z D I
+FST 4000  Cond 1 0 0 0  Err 0 0 0 0 0 0 0 0  (EQ)
+FCW 1372  Prec NEAR,64  掩码    1 1 0 0 1 0
+
+
+0018FB18   006EB295  返回到 GmTools.006EB295 来自 GmTools.0074091C
+0018FB1C   0018FB70
+0018FB20   0A1EAF94  ASCII "my1"
+0018FB24   0A229FB8  ASCII "account1"
+0018FB28   0240CC78  ASCII "my"
+0018FB2C   0A1A5000  ASCII "account"
+0018FB30   02416C60  ASCII "3306"
+0018FB34   084BCE14  ASCII "test"
+
+
+
+EAX 024007F4
+ECX 04060000 ASCII "test"
+EDX 040E0000 ASCII "127.0.0.1"
+EBX 00000000
+ESP 0913FF3C
+EBP 0913FF50
+ESI 00000000
+EDI 00000000
+EIP 00740922 GmTools.00740922
+C 1  ES 002B 32位 0(FFFFFFFF)
+P 1  CS 0023 32位 0(FFFFFFFF)
+A 0  SS 002B 32位 0(FFFFFFFF)
+Z 0  DS 002B 32位 0(FFFFFFFF)
+S 0  FS 0053 32位 7EF9C000(FFF)
+T 0  GS 002B 32位 0(FFFFFFFF)
+D 0
+O 0  LastErr ERROR_SUCCESS (00000000)
+EFL 00000207 (NO,B,NE,BE,NS,PE,GE,G)
+ST0 empty 0.0
+ST1 empty 0.0
+ST2 empty 0.0
+ST3 empty 0.0
+ST4 empty 0.0
+ST5 empty 0.0
+ST6 empty 0.0
+ST7 empty 0.0
+               3 2 1 0      E S P U O Z D I
+FST 0000  Cond 0 0 0 0  Err 0 0 0 0 0 0 0 0  (GT)
+FCW 027F  Prec NEAR,53  掩码    1 1 1 1 1 1
+
+0913FF54  |03FA0057  返回到 03FA0057 来自 GmTools.0074091C
+0913FF58  |040D0004
+0913FF5C  |040D0000  ASCII "top2"
+0913FF60  |040D0000  ASCII "top2"
+0913FF64  |040C0000  ASCII "top1"
+0913FF68  |040C0000  ASCII "top1"
+0913FF6C  |040B0000  ASCII "3306"
+0913FF70  |04060000  ASCII "test"
+
+
+004A1F02 - 8B 45 F8  - mov eax,[ebp-08]
+004A1F05 - 8B 55 FC  - mov edx,[ebp-04]
+004A1F08 - 89 42 48  - mov [edx+48],eax <<
+004A1F0B - 8B 45 FC  - mov eax,[ebp-04]
+004A1F0E - 83 78 48 00 - cmp dword ptr [eax+48],00
+
+EAX=084A6C40
+EBX=7EFDE000
+ECX=00000000
+EDX=024017D8
+ESI=00000000
+EDI=00000000
+ESP=0018FECC
+EBP=0018FEE0
+EIP=004A1F0B
+
+0042D42C - FF 75 0C  - push [ebp+0C]
+0042D42F - 89 E2  - mov edx,esp
+0042D431 - 8B 41 04  - mov eax,[ecx+04] <<
+0042D434 - FF 11  - call dword ptr [ecx]
+0042D436 - 83 C4 0C - add esp,0C
+
+EAX=0A1722B8
+EBX=00000000
+ECX=087605CC
+EDX=0018FD14
+ESI=087605C7
+EDI=00000000
+ESP=0018FD14
+EBP=0018FD24
+EIP=0042D434
+
+
+
+
+

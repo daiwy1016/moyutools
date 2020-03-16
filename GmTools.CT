@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="18">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"No description"</Description>
+      <LastState Value="84 77 97 114 103 101 141 64 0 161" Activated="0" RealAddress="006C091B"/>
+      <Color>80000008</Color>
+      <VariableType>Array of byte</VariableType>
+      <ByteLength>10</ByteLength>
+      <Address>006c091b</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"No description"</Description>
+      <LastState Value="F0 08 6C 00 00 00 00 00 18 28 00 00 3C 03 00 00 00 00 00 00 60 69 21 0A 54 2D 23 0A 4C 69 21 0A 08 14 4F 02 7C 79 40 02 B0 79 40 02 00 00 00 00 E4 79 40 02 0C 6C 4A 08 36 00 00 00 18 E8 41 00 00 00 00 00 00 00 00 00 00 00 00 00 08 36 DC 06 00 00 00 00 C0 C6 2D 00 01 02 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 36 00 00 00 18 E8 41 00 00" Activated="0" RealAddress="02407940"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>Array of byte</VariableType>
+      <ByteLength>117</ByteLength>
+      <Address>75FE0C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"源账号库"</Description>
+      <LastState Activated="0" RealAddress="0A216960"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>10</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>75FE0C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>14</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"源角色库"</Description>
+      <LastState Activated="0" RealAddress="0A232D54"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>10</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>75FE0C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>18</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"目标账号库"</Description>
+      <LastState Activated="0" RealAddress="0A21694C"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>10</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>75FE0C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>1C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"目标角色库"</Description>
+      <LastState Activated="0" RealAddress="024F1408"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>10</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>75FE0C</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>20</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"No description"</Description>
+      <LastState Value="0" Activated="0" RealAddress="0A25AA08"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>0A25AA08</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"account"</Description>
+      <LastState Activated="0" RealAddress="0A21694C"/>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>101</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>75A0F8</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>1C</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"my"</Description>
+      <LastState Activated="0" RealAddress="024F1408"/>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>101</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>75A0F8</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>20</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>9</ID>
+      <Description>"account1"</Description>
+      <LastState Activated="0" RealAddress="0A216960"/>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>101</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>75A0F8</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>14</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"my1"</Description>
+      <LastState Activated="0" RealAddress="0A232D54"/>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>101</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>75A0F8</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>18</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"No description"</Description>
+      <LastState Value="0050D4C8" Activated="0" RealAddress="0A171064"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>084A6C40+c98</Address>
+      <Offsets>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"无描述"</Description>
+      <LastState Value="0A16E5BC" Activated="0" RealAddress="02401448"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>02401448</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"无描述"</Description>
+      <LastState Value="00000000" Activated="0" RealAddress="02401820"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>02401820</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>15</ID>
+      <Description>"无描述"</Description>
+      <LastState Value="024017D8" Activated="0" RealAddress="00745630"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>GmTools.exe+345630</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>16</ID>
+      <Description>"无描述"</Description>
+      <LastState Value="024017D8" Activated="0" RealAddress="00745638"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>GmTools.exe+345638</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"无描述"</Description>
+      <LastState Value="024017D8" Activated="0" RealAddress="00745640"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>GmTools.exe+345640</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>18</ID>
+      <Description>"无描述"</Description>
+      <LastState Value="024017D8" Activated="0" RealAddress="0075BBF8"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>GmTools.exe+35BBF8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"鼠标所指控件地址"</Description>
+      <LastState Value="00000000" Activated="0" RealAddress="02401820"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00745630</Address>
+      <Offsets>
+        <Offset>48</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>20</ID>
+      <Description>"无描述"</Description>
+      <LastState Value="0A1722B8" Activated="0" RealAddress="084A78E4"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>084A78E4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>21</ID>
+      <Description>"无描述"</Description>
+      <LastState Value="0A1722B8" Activated="0" RealAddress="087605D0"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>087605D0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>22</ID>
+      <Description>"No description"</Description>
+      <LastState Value="0A16E5BC" Activated="0" RealAddress="02401448"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00745630</Address>
+      <Offsets>
+        <Offset>FFFFFC70</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>23</ID>
+      <Description>"测试数据库状态按钮基地址"</Description>
+      <LastState Value="084A6C40" Activated="0" RealAddress="0075FE48"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>GmTools.exe+35FE48</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
